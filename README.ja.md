@@ -25,21 +25,6 @@ eleventy もしくは node.js でできると思いますが、筆者が理解�
     * RSS/ATOM生成
 
 ## ディレクトリ構造
-ルートディレクトリにソースファイルを置かないポリシーとしています。
-
-`.eleventy.js`に下記を設定しています。
-```
-    return {
-        dir: {
-            input: "_src",          ソースファイルのディレクトリ
-            output: "_site",        出力先ディレクトリ
-            data: "_data",          データディレクトリ
-            includes: "_includes"   テンプレートファイルのディレクトリ
-        }
-    };
-```
-
-### ディレクトリ構成
 ```
 /simplety
     |--/_site                   静的サイト出力ディレクトリ
@@ -70,6 +55,19 @@ eleventy もしくは node.js でできると思いますが、筆者が理解�
     |--package.json
     `--README.ja.md
 ```
+ルートディレクトリにソースファイルを置かないポリシーとしています。
+
+`.eleventy.js`に下記を設定しています。
+```
+return {
+    dir: {
+        input: "_src",          ソースファイルのディレクトリ
+        output: "_site",        出力先ディレクトリ
+        data: "_data",          データディレクトリ
+        includes: "_includes"   テンプレートファイルのディレクトリ
+    }
+};
+```
 
 ## 日付
 英語圏では`{{ page.date }}`で事足りますが、日本語では馴染みのある表示になるようフィルターを設定しています。
@@ -96,7 +94,7 @@ htmlDateStringはISO 8601形式で出力しています。
 * [11ty(eleventy)で静的サイト構築](https://www.evoworx.co.jp/blog/11ty-static-site-generator/)（株式会社 エヴォワークス）
 
 ## 画像出典
-* (ぱくたそ様)[https://www.pakutaso.com/20190332070post-19633.html]
+* [ぱくたそ様](https://www.pakutaso.com/20190332070post-19633.html)
 
 ## ライセンス
 MIT License
