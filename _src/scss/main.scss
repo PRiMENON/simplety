@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'init';
+
+* {
+    font-family: 'メイリオ';
+}
+
+body {
+    background-color: $background;
+    font-size: 1em;
+}

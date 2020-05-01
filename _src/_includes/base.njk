@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+{% include 'head.njk' %}
+</head>
+<body>
+    {% include 'header.njk' %}
+    {% include 'nav.njk' %}
+    <main>
+    {{ content | safe }}
+    </main>
+    <ul>
+        <li><time>作成日：{{ date | readableDate }}</time></li>
+        <li><time>更新日：{{ lastmod | readableDate }}</time></li>
+    </ul>
+    {% include 'footer.njk' %}
+</body>
+</html>

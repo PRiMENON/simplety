@@ -1,0 +1,25 @@
+{
+    "name": "primenon.com",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "eleventy:serve": "eleventy --serve",
+        "eleventy:deploy": "eleventy",
+        "node-sass:build": "node-sass _src/scss/ --output _src/css/ --output-style expanded --source-map true",
+        "node-sass:watch": "node-sass _src/scss/ --output _src/css/ --output-style expanded --source-map true --watch",
+        "node-sass:deploy": "node-sass _src/scss/ --output _src/css/ --output-style compressed",
+        "rimraf":"rimraf _site _src/css",
+        "develop":"run-s rimraf && run-s node-sass:build && run-p node-sass:watch eleventy:serve",
+        "release":"run-s rimraf && run-p node-sass:deploy eleventy:deploy"
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@11ty/eleventy": "^0.10.0",
+        "luxon": "^1.23.0",
+        "node-sass": "^4.14.0",
+        "npm-run-all": "^4.1.5",
+        "rimraf": "^3.0.2"
+    }
+}

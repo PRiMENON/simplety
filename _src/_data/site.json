@@ -1,0 +1,14 @@
+{
+    "name": "Site Name",
+    "url": "https://www.sample.com",
+    "description": "default site description is here.",
+    "keywords":"default keyword,keyword,keyword",
+    "generator":"eleventy",
+    "robots":"default index,follow",
+    "author":{
+        "name": "Your Name Here",
+        "email": "webmaster@sample.com"
+    },
+    "google_analytics": "UA-XXXXXX-X"
+}
+ 

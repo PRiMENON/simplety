@@ -1,0 +1,29 @@
+<meta charset="utf-8">
+<meta name="author" content="{{ site.author.name }}">
+<meta name="description" content="{% if description == null %}{{ site.description }}{% else %}{{ description }}{% endif %}">
+<meta name="keywords" content="{% if keywords == null %}{{ site.keywords }}{% else %}{{ keywords }}{% endif %}">
+<meta name="generator" content="{{ site.generator }}">
+<meta name="robots" content="{% if robots == null %}{{ site.robots }}{% else %}{{ robots }}{% endif %}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ '/css/main.css' | url }}">
+<title>{% if page.url !== '/' %}{{ title }} | {% endif %}{{ site.name }}</title>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "BlogPosting",
+      "name": "{{ site.name }}",
+      "author": "{{ site.author.name }}"
+      "description": "{% if description == null %}{{ site.description }}{% else %}{{ description }}{% endif %}"
+    }
+</script>
+{% if site.google_analytics != null %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ site.google_analytics }}');
+</script>
+{% endif %}
