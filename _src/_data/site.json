@@ -9,6 +9,7 @@
         "name": "Your Name Here",
         "email": "webmaster@sample.com"
     },
+    "ldjson":"true",
     "google_analytics": "UA-XXXXXX-X"
 }
  

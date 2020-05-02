@@ -13,8 +13,8 @@ simplety
 * サイトマップ生成（sitemap.xml）
 * SASSコンパイラ（node-sassを使用しています）
 * サイト全体の共通部分（サイト名やmetaタグのdescription等）を設定ファイル（_data/site.json）に記述します
-* Google Analyticsを設定
-* JSON-LDの設定
+* Google Analyticsの設定（空ならコードを出力しません）
+* JSON-LDの設定（空ならコードを出力しません）
 
 ## できないこと
 eleventy もしくは node.js でできると思いますが、筆者が理解していないので、できないこと。
